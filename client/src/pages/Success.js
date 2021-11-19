@@ -1,8 +1,9 @@
-import React, { useEffect } from react;
-import { useMutation } from '@apollo/client';
-import { idbPromise } from "../../utils/helpers";
-import {Jumbotron} from 'components/Jumbotron/index.js';
-import { ADD_ORDER } from './utils/mutations.js';
+import React, { useEffect } from "react";
+import { useMutation } from '@apollo/react-hooks';
+import Jumbotron from "../components/Jumbotron";
+import { ADD_ORDER } from "../utils/mutations";
+import { idbPromise } from "../utils/helpers";
+
 
 function Success() {
     const [addOrder] = useMutation(ADD_ORDER);
